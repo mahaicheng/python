@@ -3,6 +3,7 @@
 
 from urllib import urlretrieve
 
+
 def firstNonBlank(lines):
     for eachLine in lines:
         if not eachLine.strip():
@@ -10,6 +11,7 @@ def firstNonBlank(lines):
 
     else:
         return eachLine
+
 
 def firstLast(webPage):
     f = open(webPage)
@@ -20,7 +22,8 @@ def firstLast(webPage):
     lines.reverse()
     print firstNonBlank(lines)
 
-def download(url = "http://www.mahaicheng.com", process = firstLast):
+
+def download(url="http://www.mahaicheng.com", process=firstLast):
     try:
         retVal = urlretrieve(url)[0]
     except IOError:
@@ -28,6 +31,7 @@ def download(url = "http://www.mahaicheng.com", process = firstLast):
 
     if retVal:
         process(retVal)
+
 
 if __name__ == '__main__':
     download()

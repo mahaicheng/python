@@ -23,7 +23,7 @@ while True:
         data = tcpCliSock.read(BUFSIZ)
 
         if not data:
-            break;
+            break
 
         tcpCliSock.send('[%s] %s' % ctime(), data)
 

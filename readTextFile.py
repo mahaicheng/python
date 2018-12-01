@@ -4,7 +4,6 @@
 'readTextFile.py -- read and display text file'
 
 
-
 # get file name
 fname = raw_input('Enter file name: ')
 print
